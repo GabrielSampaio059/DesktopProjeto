@@ -12,10 +12,20 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
