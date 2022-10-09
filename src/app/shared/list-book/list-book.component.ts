@@ -5,11 +5,11 @@ import { Book } from '../services/livro';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-student-list',
-  templateUrl: './student-list.component.html',
-  styleUrls: ['./student-list.component.scss']
+  selector: 'app-book-list',
+  templateUrl: './book-list.component.html',
+  styleUrls: ['./book-list.component.scss']
 })
-export class StudentListComponent implements OnInit {
+export class BookListComponent implements OnInit {
   p: number = 1;
   Student: Book[];
   hideWhenNoStudent: boolean = false;
