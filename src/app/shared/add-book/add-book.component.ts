@@ -3,11 +3,11 @@ import { CrudService } from '../services/crud.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 @Component({
-  selector: 'app-add-student',
-  templateUrl: './add-student.component.html',
-  styleUrls: ['./add-student.component.scss'],
+  selector: 'app-add-book',
+  templateUrl: './add-book.component.html',
+  styleUrls: ['./add-book.component.scss'],
 })
-export class AddStudentComponent implements OnInit {
+export class AddBookComponent implements OnInit {
   public BookForm: FormGroup;
   constructor(
     public crudApi: CrudService,
@@ -50,7 +50,7 @@ export class AddStudentComponent implements OnInit {
   submitBookData() {
     this.crudApi.AddBook(this.BookForm.value);
     this.toastr.success(
-      this.BookForm.controls['name'].value + ' successfully added!'
+      this.BookForm.controls['name'].value + ' Adicionado com sucesso!'
     );
     this.ResetForm();
   }
