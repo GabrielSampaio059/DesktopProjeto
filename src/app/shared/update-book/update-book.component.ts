@@ -6,8 +6,8 @@ import { Location } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-book-student',
-  templateUrl: './edit-book.component.html',
-  styleUrls: ['./edit-book.component.scss'],
+  templateUrl: './update-book.component.html',
+  styleUrls: ['./update-book.component.css'],
 })
 export class EditBookComponent implements OnInit {
   editForm: FormGroup;
