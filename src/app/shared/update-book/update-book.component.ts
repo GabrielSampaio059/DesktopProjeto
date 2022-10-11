@@ -20,7 +20,7 @@ export class EditBookComponent implements OnInit {
     private toastr: ToastrService
   ) {}
   ngOnInit() {
-    this.updateStudentData();
+    this.updateBookData();
     const id = this.actRoute.snapshot.paramMap.get('id');
     this.crudApi
       .GetBook(id)
@@ -41,7 +41,7 @@ export class EditBookComponent implements OnInit {
   get Bookvalue() {
     return this.editForm.get('value');
   }
-  updateStudentData() {
+  updateBookData() {
     this.editForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       id: ['',[Validators.required, Validators.pattern('^[0-9]+$')]],
@@ -63,6 +63,6 @@ export class EditBookComponent implements OnInit {
     this.toastr.success(
       this.editForm.controls['name'].value + ' atualizado com sucesso!!'
     );
-    this.router.navigate(['view-students']);
+    this.router.navigate(['view-books']);
   }
 }
