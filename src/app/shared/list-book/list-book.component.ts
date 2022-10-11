@@ -45,9 +45,9 @@ export class BookListComponent implements OnInit {
       }
     })
   }
-  deleteStudent(book) {
+  deleteBook(book) {
     if (window.confirm('Tem certeza que deseja deletar esse livro ?')) { 
-      this.crudApi.DeleteBook(book.$key)
+      this.crudApi.DeleteBook(book.id)
       this.toastr.success(book.name + ' deletado com sucesso!');
     }
   }
