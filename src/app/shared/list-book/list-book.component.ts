@@ -11,8 +11,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class BookListComponent implements OnInit {
   p: number = 1;
-  Student: Book[];
-  hideWhenNoStudent: boolean = false;
+  Book: Book[];
+  hideWhenNoBook: boolean = false;
   noData: boolean = false;
   preLoader: boolean = true;
   
@@ -25,11 +25,11 @@ export class BookListComponent implements OnInit {
     this.dataState();
     let s = this.crudApi.GetBookList(); 
     s.snapshotChanges().subscribe(data => {
-      this.Student = [];
+      this.Book = [];
       data.forEach(item => {
         let a = item.payload.toJSON(); 
         a['$key'] = item.key;
-        this.Student.push(a as Book);
+        this.Book.push(a as Book);
       })
     })
   }
@@ -37,10 +37,10 @@ export class BookListComponent implements OnInit {
     this.crudApi.GetBookList().valueChanges().subscribe(data => {
       this.preLoader = false;
       if(data.length <= 0){
-        this.hideWhenNoStudent = false;
+        this.hideWhenNoBook = false;
         this.noData = true;
       } else {
-        this.hideWhenNoStudent = true;
+        this.hideWhenNoBook = true;
         this.noData = false;
       }
     })
