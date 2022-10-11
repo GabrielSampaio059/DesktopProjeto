@@ -47,12 +47,12 @@
           <td class="text-center action-block">
             <span
               class="mr-2 btn btn-outline-primary btn-sm"
-              routerLink="/edit Book/{{ Book.$key }}"
+              routerLink="/edit Book/{{ Book.id }}"
               >Edit</span
             >
             <span
               class="btn btn-outline-danger btn-sm"
-              (click)="(delete book)"
+              (click)="(deleteBook)"
               >Delete</span
             >
           </td>
