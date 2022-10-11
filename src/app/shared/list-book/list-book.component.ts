@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../services/crud.service';
-import { Book } from '../services/livro'; 
+import { Book } from '../services/book'; 
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
