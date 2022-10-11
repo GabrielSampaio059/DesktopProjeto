@@ -43,7 +43,7 @@ export class CrudService {
   }
   // Delete Student Object
   DeleteBook(id: string) {
-    this.BookRef = this.db.object('students-list/' + id);
+    this.BookRef = this.db.object('book-list/' + id);
     this.BookRef.remove();
   }
 }
