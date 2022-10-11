@@ -1,7 +1,7 @@
 export class Book{
     id:string;
     name:string;
-    value:number;
+    value:string;
     description:string;
 
 
