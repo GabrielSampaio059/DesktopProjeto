@@ -45,10 +45,12 @@
           <td>{{ Book.description }}</td>
           <td>{{ Book.value }}</td>
           <td class="text-center action-block">
-            <span
+            <span>
+            <a
               class="mr-2 btn btn-outline-primary btn-sm"
-              routerLink="/edit Book/{{ Book.id }}"
-              >Edit</span
+              routerLink="['/edit Book/', Book.id ]"
+              >Edit
+            </a></span
             >
             <span
               class="btn btn-outline-danger btn-sm"
@@ -60,5 +62,7 @@
       </tbody>
     </table>
   </div>
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  <!--
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+-->
 </div>

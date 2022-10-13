@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../services/crud.service';
 import { Book } from '../services/book'; 
 import { ToastrService } from 'ngx-toastr';
+import {NgxPaginationModule} from 'ngx-pagination';
+
+
 
 @Component({
   selector: 'app-book-list',
@@ -16,9 +19,12 @@ export class BookListComponent implements OnInit {
   noData: boolean = false;
   preLoader: boolean = true;
   
+  
   constructor(
     public crudApi: CrudService,
-    public toastr: ToastrService
+    public toastr: ToastrService,
+    public pagination: NgxPaginationModule
+    
     ){ }
 
   ngOnInit() {
